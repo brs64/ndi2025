@@ -176,11 +176,11 @@
                             </svg>
                             Refaire le quiz
                         </button>
-                        <a href="{{ route('dashboard.leaders') }}" class="flex-1 gradient-nird text-white px-6 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition-opacity flex items-center justify-center">
+                        <a href="{{ route('contact') }}" class="flex-1 gradient-nird text-white px-6 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition-opacity flex items-center justify-center">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            Dashboard dirigeants
+                            Nous contacter
                         </a>
                     </div>
                 </div>
@@ -307,13 +307,13 @@ function quizApp() {
             // Recommandations
             let recommendations = [
                 {
-                    title: 'Consulter le guide de migration',
-                    description: 'Découvrez notre guide complet pour planifier votre migration vers Linux.',
-                    link: '{{ route("linux.migration") }}'
+                    title: 'Découvrir notre solution',
+                    description: 'Découvrez comment nous pouvons vous accompagner dans votre transition numérique.',
+                    link: '{{ route("solution") }}'
                 },
                 {
                     title: 'Explorer les alternatives logicielles',
-                    description: 'Trouvez les équivalents Linux de tous vos logiciels actuels.',
+                    description: 'Trouvez les équivalents open source de tous vos logiciels actuels.',
                     link: '{{ route("alternatives") }}'
                 },
             ];
@@ -321,16 +321,16 @@ function quizApp() {
             if (timeline === 'urgent') {
                 recommendations.unshift({
                     title: 'Action immédiate requise',
-                    description: 'Consultez le dashboard dirigeants pour présenter l\'urgence à votre direction.',
-                    link: '{{ route("dashboard.leaders") }}'
+                    description: 'Contactez-nous pour un accompagnement d\'urgence.',
+                    link: '{{ route("contact") }}'
                 });
             }
 
             if (priority === 'cost') {
                 recommendations.push({
-                    title: 'Calculateur d\'économies',
-                    description: 'Estimez vos économies avec notre simulateur financier.',
-                    link: '{{ route("dashboard.leaders") }}'
+                    title: 'Sensibilisation aux économies',
+                    description: 'Découvrez comment réduire les coûts de votre infrastructure IT.',
+                    link: '{{ route("sensibilisation") }}'
                 });
             }
 

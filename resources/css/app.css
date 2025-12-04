@@ -9,10 +9,13 @@
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 
-    --color-nird-primary: #2563eb;
-    --color-nird-secondary: #10b981;
-    --color-nird-accent: #8b5cf6;
-    --color-nird-dark: #1e293b;
+    /* Palette NIRD basée sur le logo */
+    --color-nird-blue: #3B82F6;
+    --color-nird-violet: #8B5CF6;
+    --color-nird-magenta: #D946EF;
+    --color-nird-pink: #EC4899;
+    --color-nird-orange: #F59E0B;
+    --color-nird-yellow: #FBBF24;
 }
 
 @layer base {
@@ -26,7 +29,21 @@
 }
 
 @layer utilities {
+    /* Gradient principal du logo NIRD */
     .gradient-nird {
-        background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+        background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 25%, #D946EF 50%, #EC4899 75%, #F59E0B 100%);
+    }
+
+    /* Variantes de gradients */
+    .gradient-nird-blue-violet {
+        background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    }
+
+    .gradient-nird-violet-pink {
+        background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+    }
+
+    .gradient-nird-pink-orange {
+        background: linear-gradient(135deg, #EC4899 0%, #F59E0B 100%);
     }
 }

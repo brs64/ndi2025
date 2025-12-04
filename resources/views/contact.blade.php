@@ -110,12 +110,12 @@
             <!-- Contact Information -->
             <div class="space-y-8">
                 <!-- Info Card -->
-                <div class="bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-xl shadow-lg p-8">
+                <div class="gradient-nird-blue-violet text-white rounded-xl shadow-lg p-8">
                     <h2 class="text-2xl font-bold mb-6">Informations</h2>
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="flex-shrink-0">
-                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <div class="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                     </svg>
@@ -129,7 +129,7 @@
 
                         <div class="flex items-start">
                             <div class="flex-shrink-0">
-                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <div class="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -144,7 +144,7 @@
 
                         <div class="flex items-start">
                             <div class="flex-shrink-0">
-                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <div class="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
@@ -156,60 +156,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- FAQ Card -->
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Questions fréquentes</h2>
-                    <div class="space-y-4" x-data="{ open: null }">
-                        <div class="border-b border-gray-200 pb-4">
-                            <button @click="open = open === 1 ? null : 1" class="flex justify-between items-center w-full text-left">
-                                <span class="font-semibold text-gray-900">Qu'est-ce que NIRD ?</span>
-                                <svg class="w-5 h-5 text-gray-500 transition-transform" :class="{ 'rotate-180': open === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div x-show="open === 1" x-transition class="mt-2 text-gray-600">
-                                NIRD est une démarche qui vise à promouvoir un numérique à la fois Inclusif, Responsable et Durable.
-                            </div>
-                        </div>
-
-                        <div class="border-b border-gray-200 pb-4">
-                            <button @click="open = open === 2 ? null : 2" class="flex justify-between items-center w-full text-left">
-                                <span class="font-semibold text-gray-900">Comment démarrer ?</span>
-                                <svg class="w-5 h-5 text-gray-500 transition-transform" :class="{ 'rotate-180': open === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div x-show="open === 2" x-transition class="mt-2 text-gray-600">
-                                Commencez par notre auto-évaluation gratuite pour identifier vos axes d'amélioration.
-                            </div>
-                        </div>
-
-                        <div class="pb-4">
-                            <button @click="open = open === 3 ? null : 3" class="flex justify-between items-center w-full text-left">
-                                <span class="font-semibold text-gray-900">Proposez-vous des formations ?</span>
-                                <svg class="w-5 h-5 text-gray-500 transition-transform" :class="{ 'rotate-180': open === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div x-show="open === 3" x-transition class="mt-2 text-gray-600">
-                                Oui, contactez-nous pour en savoir plus sur nos programmes de formation et d'accompagnement.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CTA Card -->
-                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Besoin d'aide rapidement ?</h3>
-                    <p class="text-gray-600 mb-4">Consultez nos ressources et guides pratiques</p>
-                    <a href="{{ route('resources') }}" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
-                        Accéder aux ressources
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
                 </div>
             </div>
         </div>

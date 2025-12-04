@@ -26,22 +26,22 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex md:items-center md:space-x-4">
-                    <a href="{{ route('quiz') }}" class="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors {{ request()->routeIs('quiz') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
-                        Quiz
+                    <a href="{{ route('solution') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('solution') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
+                        Solution
                     </a>
-                    <a href="{{ route('linux.migration') }}" class="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors {{ request()->routeIs('linux.migration') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
-                        Migration Linux
+                    <a href="{{ route('sensibilisation') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('sensibilisation') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
+                        Sensibilisation
                     </a>
-                    <a href="{{ route('alternatives') }}" class="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors {{ request()->routeIs('alternatives') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
+                    <a href="{{ route('alternatives') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('alternatives') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
                         Alternatives
                     </a>
-                    <a href="{{ route('dashboard.leaders') }}" class="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors {{ request()->routeIs('dashboard.leaders') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
-                        Dashboard
+                    <a href="{{ route('blog') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('blog') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
+                        Blog
                     </a>
-                    <a href="{{ route('resources') }}" class="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors {{ request()->routeIs('resources') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
-                        Ressources
+                    <a href="{{ route('quiz') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('quiz') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
+                        Quiz
                     </a>
-                    <a href="{{ route('contact') }}" class="gradient-nird text-white px-3 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+                    <a href="{{ route('contact') }}" class="gradient-nird text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
                         Contact
                     </a>
                 </div>
@@ -61,20 +61,20 @@
         <!-- Mobile menu -->
         <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="{{ route('quiz') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('quiz') ? 'bg-blue-50 text-blue-600' : '' }}">
-                    Quiz
+                <a href="{{ route('solution') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('solution') ? 'bg-blue-50 text-blue-600' : '' }}">
+                    Solution
                 </a>
-                <a href="{{ route('linux.migration') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('linux.migration') ? 'bg-blue-50 text-blue-600' : '' }}">
-                    Migration Linux
+                <a href="{{ route('sensibilisation') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('sensibilisation') ? 'bg-blue-50 text-blue-600' : '' }}">
+                    Sensibilisation
                 </a>
                 <a href="{{ route('alternatives') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('alternatives') ? 'bg-blue-50 text-blue-600' : '' }}">
                     Alternatives
                 </a>
-                <a href="{{ route('dashboard.leaders') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('dashboard.leaders') ? 'bg-blue-50 text-blue-600' : '' }}">
-                    Dashboard Dirigeants
+                <a href="{{ route('blog') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('blog') ? 'bg-blue-50 text-blue-600' : '' }}">
+                    Blog
                 </a>
-                <a href="{{ route('resources') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('resources') ? 'bg-blue-50 text-blue-600' : '' }}">
-                    Ressources
+                <a href="{{ route('quiz') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('quiz') ? 'bg-blue-50 text-blue-600' : '' }}">
+                    Quiz
                 </a>
                 <a href="{{ route('contact') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('contact') ? 'bg-blue-50 text-blue-600' : '' }}">
                     Contact
@@ -100,14 +100,14 @@
                     <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
                     <ul class="space-y-2 text-sm">
                         <li><a href="{{ route('home') }}" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
-                        <li><a href="{{ route('evaluation') }}" class="text-gray-400 hover:text-white transition-colors">Auto-évaluation</a></li>
-                        <li><a href="{{ route('resources') }}" class="text-gray-400 hover:text-white transition-colors">Ressources</a></li>
+                        <li><a href="{{ route('quiz') }}" class="text-gray-400 hover:text-white transition-colors">Quiz</a></li>
+                        <li><a href="{{ route('blog') }}" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
                     <p class="text-gray-400 text-sm">Contactez-nous pour en savoir plus sur la démarche NIRD.</p>
-                    <a href="{{ route('contact') }}" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition-colors">
+                    <a href="{{ route('contact') }}" class="inline-block mt-4 bg-violet-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-violet-700 transition-colors">
                         Nous contacter
                     </a>
                 </div>
