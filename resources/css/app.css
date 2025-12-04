@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-nird-primary: #2563eb;
+    --color-nird-secondary: #10b981;
+    --color-nird-accent: #8b5cf6;
+    --color-nird-dark: #1e293b;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply antialiased;
+    }
+}
+
+@layer utilities {
+    .gradient-nird {
+        background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+    }
+}
