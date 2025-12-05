@@ -18,10 +18,12 @@
         <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Projet NIRD</h2>
 
         <div class="bg-gray-900 rounded-xl overflow-hidden shadow-2xl mb-8">
-            <video class="w-full" controls>
-                <source src="/video-presentation.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
+            <iframe
+                class="w-full aspect-video"
+                src="https://drive.google.com/file/d/1Lg3fqiAFtiK9C5PT13hEV4wnh-wrGhZZ/preview"
+                allow="autoplay"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 </section>
