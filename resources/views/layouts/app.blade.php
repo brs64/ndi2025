@@ -42,6 +42,9 @@
                     <a href="{{ route('quiz') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('quiz') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
                         Quiz
                     </a>
+                    <a href="{{ route('about') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('about') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
+                        À propos
+                    </a>
                     <a href="{{ route('contact') }}" class="gradient-nird-header text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
                         Contact
                     </a>
@@ -80,6 +83,9 @@
                 <a href="{{ route('resources') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('resources') ? 'bg-blue-50 text-blue-600' : '' }}">
                     Ressources
                 </a>
+                <a href="{{ route('about') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('about') ? 'bg-blue-50 text-blue-600' : '' }}">
+                    À propos
+                </a>
                 <a href="{{ route('contact') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('contact') ? 'bg-blue-50 text-blue-600' : '' }}">
                     Contact
                 </a>
@@ -104,6 +110,7 @@
                     <h3 class="text-lg font-semibold mb-4">Découvrir</h3>
                     <ul class="space-y-2 text-sm">
                         <li><a href="{{ route('home') }}" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="{{ route('about') }}" class="text-gray-400 hover:text-white transition-colors">À propos</a></li>
                         <li><a href="{{ route('solution') }}" class="text-gray-400 hover:text-white transition-colors">Démarche NIRD</a></li>
                         <li><a href="{{ route('sensibilisation') }}" class="text-gray-400 hover:text-white transition-colors">Sensibilisation</a></li>
                         <li><a href="{{ route('resources') }}" class="text-gray-400 hover:text-white transition-colors">Toutes les ressources</a></li>
