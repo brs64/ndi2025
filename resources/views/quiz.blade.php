@@ -1,26 +1,26 @@
 @extends('layouts.app')
 
-@section('title', 'Quiz d\'orientation NIRD')
+@section('title', 'Quiz NIRD - Testez vos connaissances')
 
 @section('content')
-<div class="bg-gradient-to-b from-indigo-50 via-purple-50 to-white min-h-screen py-12">
+<div class="bg-gradient-to-b from-white via-white to-white min-h-screen py-12" style="background: linear-gradient(to bottom, rgba(5, 150, 105, 0.05), white);">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Header -->
         <div class="text-center mb-12">
-            <div class="inline-flex items-center bg-indigo-100 px-6 py-3 rounded-full mb-4">
-                <svg class="w-6 h-6 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+            <div class="inline-flex items-center bg-nird-green-light px-6 py-3 rounded-full mb-4">
+                <svg class="w-6 h-6 text-nird-green mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                 </svg>
-                <span class="font-semibold text-indigo-800">Quiz personnalisé</span>
+                <span class="font-semibold text-nird-green">Quiz de connaissances</span>
             </div>
-            <h1 class="text-5xl font-bold text-gray-900 mb-4">Trouvez votre solution idéale</h1>
-            <p class="text-xl text-gray-600">Répondez à quelques questions pour obtenir des recommandations personnalisées</p>
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">Testez vos connaissances NIRD</h1>
+            <p class="text-xl text-gray-600">Répondez aux questions pour évaluer votre compréhension du numérique responsable</p>
         </div>
 
         <!-- Quiz Application -->
         <div x-data="quizApp()" class="bg-white rounded-2xl shadow-2xl overflow-hidden">
             <!-- Progress Bar -->
-            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 p-6">
+            <div class="bg-nird-green p-6">
                 <div class="flex justify-between items-center mb-3">
                     <span class="text-white font-semibold">Question <span x-text="currentQuestion + 1"></span> sur <span x-text="questions.length"></span></span>
                     <span class="text-white font-semibold" x-text="Math.round(progress) + '%'"></span>
@@ -40,28 +40,24 @@
                             <div class="text-center mb-8">
                                 <div class="text-7xl mb-4" x-text="question.icon"></div>
                                 <h2 class="text-3xl font-bold text-gray-900 mb-3" x-text="question.question"></h2>
-                                <p class="text-gray-600" x-text="question.description"></p>
                             </div>
 
                             <!-- Answers -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-3">
                                 <template x-for="(answer, aIndex) in question.answers" :key="aIndex">
                                     <button @click="selectAnswer(qIndex, aIndex)"
-                                            :class="selectedAnswers[qIndex] === aIndex ? 'border-indigo-600 bg-indigo-50 ring-2 ring-indigo-600' : 'border-gray-300 hover:border-indigo-400 hover:bg-gray-50'"
-                                            class="relative p-6 border-2 rounded-xl text-left transition-all group">
-                                        <div class="flex items-start">
-                                            <div class="flex-shrink-0 mr-4">
-                                                <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
-                                                     :class="selectedAnswers[qIndex] === aIndex ? 'bg-indigo-600 text-white' : 'bg-gray-100 group-hover:bg-indigo-100'">
-                                                    <span x-text="answer.icon"></span>
-                                                </div>
+                                            :class="selectedAnswers[qIndex] === aIndex ? 'border-nird-green bg-nird-green-light ring-2 ring-nird-green' : 'border-gray-300 hover:border-nird-green hover:bg-gray-50'"
+                                            class="w-full p-4 border-2 rounded-xl text-left transition-all">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-4"
+                                                 :class="selectedAnswers[qIndex] === aIndex ? 'bg-nird-green text-white' : 'bg-gray-100'">
+                                                <span class="font-bold" x-text="String.fromCharCode(65 + aIndex)"></span>
                                             </div>
                                             <div class="flex-1">
-                                                <div class="font-semibold text-gray-900 mb-1" x-text="answer.text"></div>
-                                                <div class="text-sm text-gray-600" x-text="answer.detail"></div>
+                                                <div class="font-semibold text-gray-900" x-text="answer.text"></div>
                                             </div>
-                                            <div x-show="selectedAnswers[qIndex] === aIndex" class="absolute top-4 right-4">
-                                                <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <div x-show="selectedAnswers[qIndex] === aIndex">
+                                                <svg class="w-6 h-6 text-nird-green" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                                 </svg>
                                             </div>
@@ -111,57 +107,53 @@
                 <!-- Results -->
                 <div x-show="showResults" x-transition class="space-y-8">
                     <div class="text-center mb-8">
-                        <div class="text-7xl mb-4">🎉</div>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-3">Vos recommandations personnalisées</h2>
-                        <p class="text-xl text-gray-600">Basées sur vos réponses, voici notre analyse</p>
+                        <div class="text-7xl mb-4" x-text="score >= 8 ? '🎉' : score >= 5 ? '👍' : '📚'"></div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-3">Vos résultats</h2>
+                        <p class="text-xl text-gray-600">Vous avez obtenu <span class="font-bold text-nird-green" x-text="score"></span> sur <span class="font-bold" x-text="questions.length"></span></p>
                     </div>
 
-                    <!-- Profil -->
-                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-8 border-2 border-indigo-200">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                            <svg class="w-8 h-8 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                            </svg>
-                            Votre profil : <span class="text-indigo-600 ml-2" x-text="results.profile"></span>
-                        </h3>
-                        <p class="text-gray-700 text-lg" x-text="results.profileDescription"></p>
-                    </div>
-
-                    <!-- Distribution recommandée -->
-                    <div class="bg-white rounded-xl p-8 border-2 border-green-200 shadow-lg">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                            <span class="text-4xl mr-3">🐧</span>
-                            Distribution Linux recommandée
-                        </h3>
-                        <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-6 mb-4">
-                            <div class="text-3xl font-bold text-green-700 mb-2" x-text="results.distribution"></div>
-                            <p class="text-gray-700" x-text="results.distributionReason"></p>
+                    <!-- Score display -->
+                    <div class="bg-nird-green-light rounded-xl p-8 border-2 border-nird-green">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Votre score</h3>
+                            <span class="text-4xl font-bold text-nird-green" x-text="Math.round((score / questions.length) * 100) + '%'"></span>
                         </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-nird-green h-4 rounded-full transition-all duration-1000" :style="'width: ' + ((score / questions.length) * 100) + '%'"></div>
+                        </div>
+                        <p class="mt-4 text-gray-700 text-lg" x-text="getScoreMessage()"></p>
                     </div>
 
-                    <!-- Recommandations -->
-                    <div class="bg-white rounded-xl p-8 border-2 border-blue-200 shadow-lg">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                            <svg class="w-8 h-8 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            Prochaines étapes recommandées
-                        </h3>
-                        <div class="space-y-4">
-                            <template x-for="(recommendation, index) in results.recommendations" :key="index">
-                                <div class="flex items-start p-4 bg-blue-50 rounded-lg">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm" x-text="index + 1"></div>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="font-semibold text-gray-900 mb-1" x-text="recommendation.title"></h4>
-                                        <p class="text-gray-700 text-sm mb-2" x-text="recommendation.description"></p>
-                                        <a :href="recommendation.link" class="text-blue-600 hover:text-blue-700 font-medium text-sm inline-flex items-center">
-                                            En savoir plus
-                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                            </svg>
-                                        </a>
+                    <!-- Detailed answers -->
+                    <div class="bg-white rounded-xl p-8 border-2 border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Correction détaillée</h3>
+                        <div class="space-y-6">
+                            <template x-for="(question, qIndex) in questions" :key="qIndex">
+                                <div class="border-b border-gray-200 pb-6 last:border-0">
+                                    <div class="flex items-start mb-3">
+                                        <span class="text-2xl mr-3" x-text="question.icon"></span>
+                                        <div class="flex-1">
+                                            <h4 class="font-bold text-gray-900 mb-2" x-text="'Question ' + (qIndex + 1) + ': ' + question.question"></h4>
+                                            <div class="space-y-2">
+                                                <div class="flex items-center">
+                                                    <span class="text-sm text-gray-600 mr-2">Votre réponse :</span>
+                                                    <span class="font-semibold"
+                                                          :class="selectedAnswers[qIndex] === question.correct ? 'text-nird-green' : 'text-red-600'"
+                                                          x-text="question.answers[selectedAnswers[qIndex]].text"></span>
+                                                    <svg x-show="selectedAnswers[qIndex] === question.correct" class="w-5 h-5 ml-2 text-nird-green" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                    <svg x-show="selectedAnswers[qIndex] !== question.correct" class="w-5 h-5 ml-2 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                                <div x-show="selectedAnswers[qIndex] !== question.correct" class="flex items-center">
+                                                    <span class="text-sm text-gray-600 mr-2">Bonne réponse :</span>
+                                                    <span class="font-semibold text-nird-green" x-text="question.answers[question.correct].text"></span>
+                                                </div>
+                                                <p class="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg mt-2" x-text="question.explanation"></p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </template>
@@ -170,7 +162,7 @@
 
                     <!-- Actions -->
                     <div class="flex flex-col sm:flex-row gap-4 pt-6">
-                        <button @click="restartQuiz()" class="flex-1 border-2 border-indigo-600 text-indigo-600 px-6 py-4 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors flex items-center justify-center">
+                        <button @click="restartQuiz()" class="flex-1 border-2 border-nird-green text-nird-green px-6 py-4 rounded-lg font-bold text-lg hover:bg-nird-green-light transition-colors flex items-center justify-center">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                             </svg>
@@ -195,63 +187,128 @@ function quizApp() {
         currentQuestion: 0,
         selectedAnswers: {},
         showResults: false,
-        results: {},
+        score: 0,
         questions: [
             {
-                icon: '🏫',
-                question: 'Quel type d\'établissement êtes-vous ?',
-                description: 'Cela nous aidera à personnaliser nos recommandations',
+                icon: '🌍',
+                question: 'Que signifie l\'acronyme NIRD ?',
                 answers: [
-                    { icon: '👶', text: 'École maternelle', detail: 'Enfants de 3 à 6 ans', value: 'preschool' },
-                    { icon: '📚', text: 'École primaire', detail: 'Enfants de 6 à 11 ans', value: 'primary' },
-                    { icon: '🎓', text: 'Collège ou Lycée', detail: 'Adolescents de 11 à 18 ans', value: 'secondary' },
-                    { icon: '🏛️', text: 'Enseignement supérieur', detail: 'Université, IUT, BTS', value: 'higher' },
-                ]
+                    { text: 'Numérique Inclusif Responsable Durable' },
+                    { text: 'Numérique Innovation Recherche Développement' },
+                    { text: 'Network Infrastructure Reliable Design' },
+                    { text: 'Numérique Interactif Résilient Dynamique' }
+                ],
+                correct: 0,
+                explanation: 'NIRD signifie Numérique Inclusif Responsable Durable. Ces quatre piliers représentent les valeurs fondamentales de la démarche.'
             },
             {
-                icon: '💻',
-                question: 'Combien d\'ordinateurs utilisez-vous ?',
-                description: 'Estimation du parc informatique',
+                icon: '📊',
+                question: 'Quel pourcentage des émissions mondiales de gaz à effet de serre représente le numérique ?',
                 answers: [
-                    { icon: '1️⃣', text: 'Moins de 20 postes', detail: 'Petit établissement', value: 'small' },
-                    { icon: '2️⃣', text: '20 à 100 postes', detail: 'Établissement moyen', value: 'medium' },
-                    { icon: '3️⃣', text: '100 à 500 postes', detail: 'Grand établissement', value: 'large' },
-                    { icon: '4️⃣', text: 'Plus de 500 postes', detail: 'Très grand établissement', value: 'xlarge' },
-                ]
+                    { text: '1%' },
+                    { text: '4%' },
+                    { text: '10%' },
+                    { text: '15%' }
+                ],
+                correct: 1,
+                explanation: 'Le numérique représente 4% des émissions mondiales de GES, un chiffre qui continue d\'augmenter avec la croissance du secteur.'
             },
             {
-                icon: '🛠️',
-                question: 'Quel est votre niveau technique ?',
-                description: 'Compétences de l\'équipe IT',
+                icon: '⚙️',
+                question: 'Quel pourcentage de l\'impact écologique d\'un appareil numérique est lié à sa fabrication ?',
                 answers: [
-                    { icon: '🌱', text: 'Débutant', detail: 'Peu d\'expérience avec Linux', value: 'beginner' },
-                    { icon: '🌿', text: 'Intermédiaire', detail: 'Quelques connaissances Linux', value: 'intermediate' },
-                    { icon: '🌳', text: 'Avancé', detail: 'Bonne maîtrise Linux', value: 'advanced' },
-                    { icon: '🚀', text: 'Expert', detail: 'Administrateur système confirmé', value: 'expert' },
-                ]
+                    { text: '30%' },
+                    { text: '50%' },
+                    { text: '65%' },
+                    { text: '80%' }
+                ],
+                correct: 3,
+                explanation: '80% de l\'impact écologique d\'un appareil est lié à sa fabrication. C\'est pourquoi prolonger la durée de vie du matériel est si important.'
             },
             {
-                icon: '⏰',
-                question: 'Quel est votre calendrier de migration ?',
-                description: 'Quand prévoyez-vous de migrer ?',
+                icon: '🐧',
+                question: 'Quelle distribution Linux est spécialement adaptée pour les écoles primaires ?',
                 answers: [
-                    { icon: '🔥', text: 'Urgent (< 3 mois)', detail: 'Windows 10 arrive en fin de vie', value: 'urgent' },
-                    { icon: '📅', text: 'Court terme (3-6 mois)', detail: 'Planification en cours', value: 'short' },
-                    { icon: '🗓️', text: 'Moyen terme (6-12 mois)', detail: 'Préparation progressive', value: 'medium' },
-                    { icon: '🎯', text: 'Long terme (> 1 an)', detail: 'Réflexion et tests', value: 'long' },
-                ]
+                    { text: 'Ubuntu' },
+                    { text: 'Linux NIRD' },
+                    { text: 'PrimTux' },
+                    { text: 'Debian' }
+                ],
+                correct: 2,
+                explanation: 'PrimTux est une distribution GNU/Linux spécialement développée pour les écoles primaires, avec des ressources pédagogiques adaptées aux 3 cycles.'
             },
             {
-                icon: '🎯',
-                question: 'Quelle est votre priorité principale ?',
-                description: 'Qu\'attendez-vous de Linux ?',
+                icon: '🎓',
+                question: 'Quelle distribution Linux est adaptée au collège et lycée, notamment pour l\'enseignement NSI ?',
                 answers: [
-                    { icon: '💰', text: 'Économies', detail: 'Réduire les coûts IT', value: 'cost' },
-                    { icon: '🌍', text: 'Écologie', detail: 'Réduire l\'impact environnemental', value: 'ecology' },
-                    { icon: '🎓', text: 'Pédagogie', detail: 'Enseigner l\'open source', value: 'education' },
-                    { icon: '🛡️', text: 'Sécurité', detail: 'Protection des données', value: 'security' },
-                ]
+                    { text: 'Linux Mint' },
+                    { text: 'Linux NIRD' },
+                    { text: 'Fedora' },
+                    { text: 'Manjaro' }
+                ],
+                correct: 1,
+                explanation: 'Linux NIRD est une distribution GNU/Linux légère adaptée au collège et lycée, avec une suite complète de logiciels libres pour usage scolaire, dont NSI.'
             },
+            {
+                icon: '💰',
+                question: 'Quel est le prix approximatif d\'une licence Windows 10/11 par poste ?',
+                answers: [
+                    { text: '50€' },
+                    { text: '95€' },
+                    { text: '145€' },
+                    { text: '200€' }
+                ],
+                correct: 2,
+                explanation: 'Une licence Windows 10/11 coûte environ 145€ par poste, ce qui représente une économie importante en passant aux logiciels libres.'
+            },
+            {
+                icon: '♻️',
+                question: 'Qu\'est-ce que la sobriété numérique ?',
+                answers: [
+                    { text: 'Utiliser internet moins de 2h par jour' },
+                    { text: 'Adopter une utilisation raisonnée des technologies pour réduire leur impact' },
+                    { text: 'N\'utiliser que des appareils reconditionnés' },
+                    { text: 'Désactiver toutes les notifications' }
+                ],
+                correct: 1,
+                explanation: 'La sobriété numérique consiste à adopter une utilisation plus raisonnée et responsable des technologies numériques pour réduire leur impact environnemental et social.'
+            },
+            {
+                icon: '🔄',
+                question: 'Parmi ces actions, laquelle contribue le plus à réduire l\'impact environnemental du numérique ?',
+                answers: [
+                    { text: 'Supprimer ses emails régulièrement' },
+                    { text: 'Prolonger la durée de vie du matériel' },
+                    { text: 'Éteindre son ordinateur tous les soirs' },
+                    { text: 'Utiliser le mode sombre' }
+                ],
+                correct: 1,
+                explanation: 'Prolonger la durée de vie du matériel est l\'action la plus impactante, car 80% de l\'impact environnemental vient de la fabrication.'
+            },
+            {
+                icon: '🤝',
+                question: 'Qu\'est-ce que la co-construction dans la démarche NIRD ?',
+                answers: [
+                    { text: 'Construire ensemble les bâtiments scolaires' },
+                    { text: 'Une démarche participative impliquant tous les acteurs de l\'établissement' },
+                    { text: 'Coder à plusieurs sur le même projet' },
+                    { text: 'Partager les coûts d\'infrastructure' }
+                ],
+                correct: 1,
+                explanation: 'La co-construction est une démarche participative qui implique tous les acteurs (enseignants, élèves, direction, collectivités) pour identifier les besoins et créer des solutions adaptées.'
+            },
+            {
+                icon: '🌱',
+                question: 'D\'ici 2030, comment évoluera le nombre d\'équipements numériques selon les projections ?',
+                answers: [
+                    { text: 'Il restera stable' },
+                    { text: 'Il augmentera de 50%' },
+                    { text: 'Il doublera (x2)' },
+                    { text: 'Il triplera (x3)' }
+                ],
+                correct: 2,
+                explanation: 'Le nombre d\'équipements numériques devrait doubler d\'ici 2030, ce qui rend d\'autant plus urgent l\'adoption d\'une démarche numérique responsable.'
+            }
         ],
         get progress() {
             return ((this.currentQuestion + 1) / this.questions.length) * 100;
@@ -270,85 +327,33 @@ function quizApp() {
             }
         },
         calculateResults() {
-            // Déterminer le profil
-            const schoolType = this.questions[0].answers[this.selectedAnswers[0]].value;
-            const size = this.questions[1].answers[this.selectedAnswers[1]].value;
-            const techLevel = this.questions[2].answers[this.selectedAnswers[2]].value;
-            const timeline = this.questions[3].answers[this.selectedAnswers[3]].value;
-            const priority = this.questions[4].answers[this.selectedAnswers[4]].value;
-
-            // Profil
-            let profile = 'Établissement innovant';
-            let profileDescription = 'Votre école est prête à adopter Linux pour moderniser son infrastructure.';
-
-            if (techLevel === 'beginner') {
-                profile = 'Débutant motivé';
-                profileDescription = 'Vous débutez avec Linux mais êtes motivé. Nous recommandons une distribution facile et un bon accompagnement.';
-            } else if (techLevel === 'expert') {
-                profile = 'Expert technique';
-                profileDescription = 'Votre expertise permet d\'envisager des solutions avancées et personnalisées.';
+            this.score = 0;
+            for (let i = 0; i < this.questions.length; i++) {
+                if (this.selectedAnswers[i] === this.questions[i].correct) {
+                    this.score++;
+                }
             }
-
-            // Distribution recommandée
-            let distribution = 'Ubuntu';
-            let distributionReason = 'Ubuntu offre le meilleur équilibre entre facilité d\'utilisation et support communautaire, idéal pour débuter.';
-
-            if (schoolType === 'preschool' || schoolType === 'primary') {
-                distribution = 'Edubuntu';
-                distributionReason = 'Edubuntu est spécialement conçu pour l\'enseignement primaire avec des applications éducatives adaptées à l\'âge.';
-            } else if (techLevel === 'expert' && size === 'large' || size === 'xlarge') {
-                distribution = 'Debian Edu';
-                distributionReason = 'Debian Edu offre une solution complète pour les grandes infrastructures avec gestion centralisée et serveur LTSP.';
-            } else if (techLevel === 'beginner') {
-                distribution = 'Linux Mint';
-                distributionReason = 'Linux Mint a une interface familière pour les utilisateurs de Windows, facilitant la transition.';
-            }
-
-            // Recommandations
-            let recommendations = [
-                {
-                    title: 'Découvrir notre solution',
-                    description: 'Découvrez comment nous pouvons vous accompagner dans votre transition numérique.',
-                    link: '{{ route("solution") }}'
-                },
-                {
-                    title: 'Explorer les alternatives logicielles',
-                    description: 'Trouvez les équivalents open source de tous vos logiciels actuels.',
-                    link: '{{ route("alternatives") }}'
-                },
-            ];
-
-            if (timeline === 'urgent') {
-                recommendations.unshift({
-                    title: 'Action immédiate requise',
-                    description: 'Contactez-nous pour un accompagnement d\'urgence.',
-                    link: '{{ route("contact") }}'
-                });
-            }
-
-            if (priority === 'cost') {
-                recommendations.push({
-                    title: 'Sensibilisation aux économies',
-                    description: 'Découvrez comment réduire les coûts de votre infrastructure IT.',
-                    link: '{{ route("sensibilisation") }}'
-                });
-            }
-
-            this.results = {
-                profile,
-                profileDescription,
-                distribution,
-                distributionReason,
-                recommendations
-            };
-
             this.showResults = true;
+        },
+        getScoreMessage() {
+            const percentage = (this.score / this.questions.length) * 100;
+            if (percentage === 100) {
+                return 'Parfait ! Vous maîtrisez parfaitement les concepts du numérique responsable.';
+            } else if (percentage >= 80) {
+                return 'Excellent ! Vous avez une très bonne compréhension de la démarche NIRD.';
+            } else if (percentage >= 60) {
+                return 'Bien ! Vous connaissez les bases du numérique responsable, continuez à vous informer.';
+            } else if (percentage >= 40) {
+                return 'Pas mal ! Il y a encore des concepts à approfondir, explorez davantage le site.';
+            } else {
+                return 'Découvrez le site pour en apprendre plus sur le numérique responsable et durable.';
+            }
         },
         restartQuiz() {
             this.currentQuestion = 0;
             this.selectedAnswers = {};
             this.showResults = false;
-            this.results = {};
+            this.score = 0;
         }
     }
 }

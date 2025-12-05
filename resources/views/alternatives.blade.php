@@ -7,12 +7,8 @@
 <section class="gradient-nird-blue-violet text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                Alternatives Open Source
-            </h1>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
-                Logiciels libres et systèmes d'exploitation pour votre établissement
-            </p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Alternatives Open Source</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">Logiciels libres et systèmes d'exploitation pour votre établissement</p>
         </div>
     </div>
 </section>
@@ -29,18 +25,26 @@
             <div class="space-y-4">
                 @foreach($alternatives as $alt)
                 <div class="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-                    <div class="flex items-start justify-between">
-                        <div class="flex items-start space-x-4">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-start space-x-4 flex-1">
                             <span class="text-3xl">{{ $alt['icon'] }}</span>
-                            <div>
+                            <div class="flex-1">
                                 <h3 class="text-lg font-bold text-gray-900 mb-1">{{ $alt['alternative'] }}</h3>
                                 <p class="text-sm text-gray-600 mb-2">{{ $alt['description'] }}</p>
                                 <p class="text-xs text-gray-500">Alternative à : <span class="font-semibold">{{ $alt['proprietary'] }}</span></p>
                             </div>
                         </div>
-                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded text-xs font-semibold whitespace-nowrap">
-                            Gratuit
-                        </span>
+                        <div class="flex flex-col items-end gap-8 flex-shrink-0">
+                            <span class="badge-eco px-3 py-1 rounded text-xs font-semibold whitespace-nowrap">
+                                Gratuit
+                            </span>
+                            @if(isset($alt['price']))
+                            <div class="text-right flex gap-1">
+                                <div class="text-xs text-gray-500 mb-0.5" >Prix licence payante :</div>
+                                <div class="text-xs font-semibold text-red-500">{{ $alt['price'] }}</div>
+                            </div>
+                            @endif
+                        </div>
                     </div>
                 </div>
                 @endforeach
@@ -80,17 +84,6 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="py-16 gradient-nird-blue-violet text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl font-bold mb-4">Besoin d'aide pour migrer ?</h2>
-        <p class="text-lg text-blue-100 mb-8">Contactez-nous pour un accompagnement personnalisé</p>
-        <a href="{{ route('contact') }}" class="inline-block bg-white text-violet-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-            Nous contacter
-        </a>
     </div>
 </section>
 @endsection

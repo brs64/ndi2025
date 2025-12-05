@@ -21,13 +21,14 @@
                         <div class="w-10 h-10 gradient-nird rounded-lg flex items-center justify-center" style="display: none;">
                             <span class="text-white font-bold text-xl">N</span>
                         </div>
+                        <span class="ml-2 font-bold text-xl text-gradient-nird">NIRD</span>
                     </a>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex md:items-center md:space-x-4">
                     <a href="{{ route('solution') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('solution') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
-                        Solution
+                        Démarche
                     </a>
                     <a href="{{ route('sensibilisation') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('sensibilisation') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
                         Sensibilisation
@@ -35,13 +36,13 @@
                     <a href="{{ route('alternatives') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('alternatives') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
                         Alternatives
                     </a>
-                    <a href="{{ route('blog') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('blog') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
-                        Blog
+                    <a href="{{ route('linux.install') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('linux.install') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
+                        Installer Linux
                     </a>
                     <a href="{{ route('quiz') }}" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors {{ request()->routeIs('quiz') ? 'text-blue-600 border-b-2 border-blue-600' : '' }}">
                         Quiz
                     </a>
-                    <a href="{{ route('contact') }}" class="gradient-nird text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+                    <a href="{{ route('contact') }}" class="gradient-nird-header text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
                         Contact
                     </a>
                 </div>
@@ -70,8 +71,8 @@
                 <a href="{{ route('alternatives') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('alternatives') ? 'bg-blue-50 text-blue-600' : '' }}">
                     Alternatives
                 </a>
-                <a href="{{ route('blog') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('blog') ? 'bg-blue-50 text-blue-600' : '' }}">
-                    Blog
+                <a href="{{ route('linux.install') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('linux.install') ? 'bg-blue-50 text-blue-600' : '' }}">
+                    Installer Linux
                 </a>
                 <a href="{{ route('quiz') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('quiz') ? 'bg-blue-50 text-blue-600' : '' }}">
                     Quiz
@@ -101,7 +102,6 @@
                     <ul class="space-y-2 text-sm">
                         <li><a href="{{ route('home') }}" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
                         <li><a href="{{ route('quiz') }}" class="text-gray-400 hover:text-white transition-colors">Quiz</a></li>
-                        <li><a href="{{ route('blog') }}" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
                     </ul>
                 </div>
                 <div>

@@ -4,15 +4,11 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="gradient-nird-violet-pink text-white py-20">
+<section class="gradient-nird-blue-violet text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                Sensibilisation
-            </h1>
-            <p class="text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
-                Sobriété numérique, ré-emploi et reconditionnement du matériel, co-construction
-            </p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Sensibilisation</h1>
+            <p class="text-2xl mb-8 text-white max-w-3xl mx-auto">Sobriété numérique, ré-emploi et reconditionnement du matériel, co-construction</p>
         </div>
     </div>
 </section>
@@ -28,7 +24,7 @@
                 </p>
                 <div class="space-y-4">
                     <div class="flex items-start">
-                        <div class="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 mr-3">
+                        <div class="flex-shrink-0 w-6 h-6 bg-nird-green rounded-full flex items-center justify-center mt-1 mr-3">
                             <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
@@ -39,7 +35,7 @@
                         </div>
                     </div>
                     <div class="flex items-start">
-                        <div class="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 mr-3">
+                        <div class="flex-shrink-0 w-6 h-6 bg-nird-green rounded-full flex items-center justify-center mt-1 mr-3">
                             <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
@@ -50,7 +46,7 @@
                         </div>
                     </div>
                     <div class="flex items-start">
-                        <div class="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 mr-3">
+                        <div class="flex-shrink-0 w-6 h-6 bg-nird-green rounded-full flex items-center justify-center mt-1 mr-3">
                             <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
@@ -69,16 +65,16 @@
                 </div>
                 <div class="space-y-4">
                     <div class="bg-white rounded-lg p-4 shadow-sm">
-                        <div class="text-3xl font-bold text-green-600 mb-1">4%</div>
+                        <div class="text-3xl font-bold text-nird-green mb-1">4%</div>
                         <p class="text-sm text-gray-600">des émissions mondiales de GES</p>
                     </div>
                     <div class="bg-white rounded-lg p-4 shadow-sm">
-                        <div class="text-3xl font-bold text-green-600 mb-1">80%</div>
-                        <p class="text-sm text-gray-600">de l'impact lié à la fabrication</p>
+                        <div class="text-3xl font-bold text-nird-green mb-1">80%</div>
+                        <p class="text-sm text-gray-600">de l'impact écologique d'un appareil lié à sa fabrication</p>
                     </div>
                     <div class="bg-white rounded-lg p-4 shadow-sm">
-                        <div class="text-3xl font-bold text-green-600 mb-1">2x</div>
-                        <p class="text-sm text-gray-600">Doublement du nombre d'équipements d'ici 2030</p>
+                        <div class="text-3xl font-bold text-nird-green mb-1">x2</div>
+                        <p class="text-sm text-gray-600">au nombre d'équipements d'ici 2030</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +96,7 @@
             <div class="bg-white rounded-xl p-8 shadow-sm">
                 <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                     <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"></path>
                     </svg>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">Reconditionnement</h3>
@@ -130,8 +126,8 @@
             </div>
 
             <div class="bg-white rounded-xl p-8 shadow-sm">
-                <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 bg-nird-green-light rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-nird-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
                     </svg>
                 </div>
@@ -202,7 +198,7 @@
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold text-gray-900 mb-4">Co-construction</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Une démarche participative pour impliquer tous les acteurs de votre établissement
+                Une démarche participative pour impliquer votre établissement et partager le savoir
             </p>
         </div>
 
@@ -241,9 +237,9 @@
                 </ul>
             </div>
 
-            <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 border border-green-200">
+            <div class="bg-nird-green-light rounded-xl p-8 border border-nird-green">
                 <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-nird-green rounded-lg flex items-center justify-center mr-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
@@ -255,19 +251,19 @@
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
                     <li class="flex items-center">
-                        <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-nird-green mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                         </svg>
                         Comité de pilotage
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-nird-green mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                         </svg>
                         Groupes de travail thématiques
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-nird-green mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                         </svg>
                         Suivi et évaluation participatifs
@@ -343,17 +339,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="py-16 gradient-nird-violet-pink text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold mb-4">Lancez votre démarche de sensibilisation</h2>
-        <p class="text-xl text-green-100 mb-8">Contactez-nous pour organiser un atelier dans votre établissement</p>
-        <a href="{{ route('contact') }}" class="inline-block bg-white text-pink-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-            Nous contacter
-        </a>
     </div>
 </section>
 @endsection

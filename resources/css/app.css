@@ -16,6 +16,11 @@
     --color-nird-pink: #EC4899;
     --color-nird-orange: #F59E0B;
     --color-nird-yellow: #FBBF24;
+
+    /* Couleurs vertes pour accentuation écologique */
+    --color-nird-green: #059669;
+    --color-nird-green-dark: #047857;
+    --color-nird-green-light: #059669;
 }
 
 @layer base {
@@ -29,21 +34,66 @@
 }
 
 @layer utilities {
-    /* Gradient principal du logo NIRD */
-    .gradient-nird {
+    /* Gradient coloré original pour le header */
+    .gradient-nird-header {
         background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 25%, #D946EF 50%, #EC4899 75%, #F59E0B 100%);
     }
 
+    /* Gradient principal du logo NIRD - Version verte */
+    .gradient-nird {
+        background: linear-gradient(135deg, #047857 0%, #059669 50%, #059669 100%);
+    }
+    .text-gradient-nird {
+        background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 25%, #D946EF 50%, #EC4899 75%, #F59E0B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
     /* Variantes de gradients */
     .gradient-nird-blue-violet {
-        background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+        background: linear-gradient(135deg, #047857 0%, #059669 100%);
     }
 
     .gradient-nird-violet-pink {
-        background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+        background: linear-gradient(135deg, #059669 0%, #059669 100%);
     }
 
     .gradient-nird-pink-orange {
-        background: linear-gradient(135deg, #EC4899 0%, #F59E0B 100%);
+        background: linear-gradient(135deg, #059669 0%, #059669 100%);
+    }
+
+    /* Boutons avec contours verts */
+    .btn-green-outline {
+        border: 2px solid #059669;
+        color: #059669;
+    }
+
+    .btn-green-outline:hover {
+        background-color: #059669;
+        color: white;
+    }
+
+    /* Badge vert pour éléments écologiques/gratuits */
+    .badge-eco {
+        background-color: rgba(5, 150, 105, 0.1);
+        color: #059669;
+        border: 1px solid #059669;
+    }
+
+    /* Classe utilitaire pour la couleur vert NIRD */
+    .bg-nird-green {
+        background-color: #059669;
+    }
+
+    .text-nird-green {
+        color: #059669;
+    }
+
+    .border-nird-green {
+        border-color: #059669;
+    }
+
+    .bg-nird-green-light {
+        background-color: rgba(5, 150, 105, 0.1);
     }
 }

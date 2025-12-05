@@ -4,18 +4,17 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="gradient-nird text-white py-32">
+<section class="gradient-nird text-white py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-5xl md:text-6xl font-bold mb-6">
-            Numérique Inclusif<br>
-            Responsable et Durable
+            NIRD
         </h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90">
-            Accompagnement des établissements vers un numérique éthique et soutenable
+            Accompagnement des établissements scolaires vers un numérique éthique et soutenable
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="{{ route('solution') }}" class="bg-white text-violet-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-                Notre solution
+                La démarche
             </a>
             <a href="{{ route('contact') }}" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-violet-600 transition-colors">
                 Nous contacter
@@ -76,11 +75,11 @@
 <!-- Nos services -->
 <section class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Nos services</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Nos conseils</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a href="{{ route('solution') }}" class="bg-white p-8 rounded-lg hover:shadow-lg transition-shadow">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Solution</h3>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Démarche</h3>
                 <p class="text-gray-600">Accompagnement dans votre transition numérique et éco-responsable</p>
             </a>
 
@@ -92,22 +91,6 @@
             <a href="{{ route('alternatives') }}" class="bg-white p-8 rounded-lg hover:shadow-lg transition-shadow">
                 <h3 class="text-xl font-bold text-gray-900 mb-3">Alternatives</h3>
                 <p class="text-gray-600">Logiciels libres et systèmes d'exploitation open source</p>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="py-20 gradient-nird text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold mb-4">Prêt à démarrer ?</h2>
-        <p class="text-xl mb-8 text-white/90">Découvrez comment nous pouvons vous accompagner</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{{ route('quiz') }}" class="bg-white text-violet-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-                Faire le quiz
-            </a>
-            <a href="{{ route('contact') }}" class="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-violet-600 transition-colors">
-                Nous contacter
             </a>
         </div>
     </div>
