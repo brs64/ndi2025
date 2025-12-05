@@ -19,31 +19,47 @@
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         @foreach($categories as $categoryName => $alternatives)
-        <div class="mb-12 last:mb-0">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">{{ $categoryName }}</h2>
+        <div class="mb-16 last:mb-0">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">{{ $categoryName }}</h2>
 
-            <div class="space-y-4">
+            <div class="space-y-6">
                 @foreach($alternatives as $alt)
-                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-                    <div class="flex items-start justify-between gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
+                    <!-- Solution payante (gauche) -->
+                    <div class="bg-red-50 border-2 border-red-200 rounded-lg p-6 flex flex-col">
                         <div class="flex items-start space-x-4 flex-1">
                             <span class="text-3xl">{{ $alt['icon'] }}</span>
                             <div class="flex-1">
-                                <h3 class="text-lg font-bold text-gray-900 mb-1">{{ $alt['alternative'] }}</h3>
-                                <p class="text-sm text-gray-600 mb-2">{{ $alt['description'] }}</p>
-                                <p class="text-xs text-gray-500">Alternative à : <span class="font-semibold">{{ $alt['proprietary'] }}</span></p>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <h3 class="text-lg font-bold text-gray-900">{{ $alt['proprietary'] }}</h3>
+                                    <span class="px-2 py-1 bg-red-100 text-red-700 rounded text-xs font-semibold">
+                                        Payant
+                                    </span>
+                                </div>
+                                @if(isset($alt['price']))
+                                <div class="mt-3 bg-white rounded px-3 py-2 border border-red-200">
+                                    <p class="text-xs text-gray-600 mb-1">Prix de la licence :</p>
+                                    <p class="text-sm font-bold text-red-600">{{ $alt['price'] }}</p>
+                                </div>
+                                @endif
                             </div>
                         </div>
-                        <div class="flex flex-col items-end gap-8 flex-shrink-0">
-                            <span class="badge-eco px-3 py-1 rounded text-xs font-semibold whitespace-nowrap">
-                                Gratuit
-                            </span>
-                            @if(isset($alt['price']))
-                            <div class="text-right flex gap-1">
-                                <div class="text-xs text-gray-500 mb-0.5" >Prix licence payante :</div>
-                                <div class="text-xs font-semibold text-red-500">{{ $alt['price'] }}</div>
+                    </div>
+
+                    <!-- Alternative open source (droite) -->
+                    <div class="bg-nird-green-light border-2 border-nird-green rounded-lg p-6 flex flex-col">
+                        <div class="flex items-start space-x-4 flex-1">
+                            <span class="text-3xl">{{ $alt['icon'] }}</span>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <h3 class="text-lg font-bold text-gray-900">{{ $alt['alternative'] }}</h3>
+                                    <span class="badge-eco px-2 py-1 rounded text-xs font-semibold">
+                                        Gratuit
+                                    </span>
+                                </div>
+                                <p class="text-sm text-gray-700 mt-2">{{ $alt['description'] }}</p>
+                                <p class="text-xs text-nird-green font-semibold mt-3">✓ Open Source • ✓ Sans frais de licence</p>
                             </div>
-                            @endif
                         </div>
                     </div>
                 </div>
