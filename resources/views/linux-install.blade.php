@@ -82,21 +82,21 @@
                         <span class="text-blue-600 font-bold mr-2">•</span>
                         <div>
                             <span class="font-semibold">Ubuntu</span> : Idéale pour les débutants, interface conviviale
-                            <br><span class="text-sm text-gray-600">Site officiel : ubuntu.com</span>
+                            <br><span class="text-sm text-gray-600">Site officiel : <a href="https://ubuntu.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">ubuntu.com</a></span>
                         </div>
                     </li>
                     <li class="flex items-start">
                         <span class="text-blue-600 font-bold mr-2">•</span>
                         <div>
                             <span class="font-semibold">Linux Mint</span> : Interface familière pour les utilisateurs Windows
-                            <br><span class="text-sm text-gray-600">Site officiel : linuxmint.com</span>
+                            <br><span class="text-sm text-gray-600">Site officiel : <a href="https://linuxmint.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">linuxmint.com</a></span>
                         </div>
                     </li>
                     <li class="flex items-start">
                         <span class="text-blue-600 font-bold mr-2">•</span>
                         <div>
                             <span class="font-semibold">Linux NIRD</span> : Spécialement conçu pour l'éducation (collège/lycée)
-                            <br><span class="text-sm text-gray-600">Plus d'infos : nird.forge.apps.education.fr/linux/</span>
+                            <br><span class="text-sm text-gray-600">Plus d'infos : <a href="https://nird.forge.apps.education.fr/linux/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">nird.forge.apps.education.fr/linux/</a></span>
                         </div>
                     </li>
                 </ul>
@@ -120,7 +120,7 @@
                 <div class="grid md:grid-cols-2 gap-4 mb-4">
                     <div class="border border-gray-200 rounded-lg p-4">
                         <h4 class="font-semibold text-gray-900 mb-2">Sur Windows</h4>
-                        <p class="text-sm text-gray-600 mb-2">Utilisez <strong>Rufus</strong> ou <strong>Balena Etcher</strong></p>
+                        <p class="text-sm text-gray-600 mb-2">Utilisez <a href="https://rufus.ie" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline font-bold">Rufus</a> ou <a href="https://www.balena.io/etcher" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline font-bold">Balena Etcher</a></p>
                         <ol class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
                             <li>Téléchargez et installez Rufus</li>
                             <li>Insérez votre clé USB</li>
@@ -130,7 +130,7 @@
                     </div>
                     <div class="border border-gray-200 rounded-lg p-4">
                         <h4 class="font-semibold text-gray-900 mb-2">Sur Linux/Mac</h4>
-                        <p class="text-sm text-gray-600 mb-2">Utilisez <strong>Balena Etcher</strong> ou <strong>dd</strong></p>
+                        <p class="text-sm text-gray-600 mb-2">Utilisez <a href="https://www.balena.io/etcher" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline font-bold">Balena Etcher</a> ou <strong>dd</strong></p>
                         <ol class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
                             <li>Téléchargez Balena Etcher</li>
                             <li>Sélectionnez le fichier ISO</li>
@@ -321,19 +321,19 @@
                         <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Forums Ubuntu-fr.org</span>
+                        <a href="https://forum.ubuntu-fr.org" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Forums Ubuntu-fr.org</a>
                     </li>
                     <li class="flex items-start">
                         <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Documentation officielle Ubuntu</span>
+                        <a href="https://doc.ubuntu-fr.org" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Documentation officielle Ubuntu</a>
                     </li>
                     <li class="flex items-start">
                         <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Tutoriels vidéo sur YouTube</span>
+                        <a href="https://www.youtube.com/results?search_query=installer+linux+ubuntu+tutoriel+français" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Tutoriels vidéo sur YouTube</a>
                     </li>
                 </ul>
             </div>

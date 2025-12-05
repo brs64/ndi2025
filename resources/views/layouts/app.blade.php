@@ -63,7 +63,7 @@
         <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="{{ route('solution') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('solution') ? 'bg-blue-50 text-blue-600' : '' }}">
-                    Solution
+                    Démarche
                 </a>
                 <a href="{{ route('sensibilisation') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('sensibilisation') ? 'bg-blue-50 text-blue-600' : '' }}">
                     Sensibilisation
@@ -76,6 +76,9 @@
                 </a>
                 <a href="{{ route('quiz') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('quiz') ? 'bg-blue-50 text-blue-600' : '' }}">
                     Quiz
+                </a>
+                <a href="{{ route('resources') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('resources') ? 'bg-blue-50 text-blue-600' : '' }}">
+                    Ressources
                 </a>
                 <a href="{{ route('contact') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 {{ request()->routeIs('contact') ? 'bg-blue-50 text-blue-600' : '' }}">
                     Contact
@@ -92,22 +95,32 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-lg font-semibold mb-4">NIRD</h3>
                     <p class="text-gray-400 text-sm">Numérique Inclusif, Responsable et Durable pour un avenir meilleur.</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <h3 class="text-lg font-semibold mb-4">Découvrir</h3>
                     <ul class="space-y-2 text-sm">
                         <li><a href="{{ route('home') }}" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
-                        <li><a href="{{ route('quiz') }}" class="text-gray-400 hover:text-white transition-colors">Quiz</a></li>
+                        <li><a href="{{ route('solution') }}" class="text-gray-400 hover:text-white transition-colors">Démarche NIRD</a></li>
+                        <li><a href="{{ route('sensibilisation') }}" class="text-gray-400 hover:text-white transition-colors">Sensibilisation</a></li>
+                        <li><a href="{{ route('resources') }}" class="text-gray-400 hover:text-white transition-colors">Toutes les ressources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Outils</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="{{ route('alternatives') }}" class="text-gray-400 hover:text-white transition-colors">Alternatives Open Source</a></li>
+                        <li><a href="{{ route('linux.install') }}" class="text-gray-400 hover:text-white transition-colors">Installer Linux</a></li>
+                        <li><a href="{{ route('quiz') }}" class="text-gray-400 hover:text-white transition-colors">Quiz NIRD</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <p class="text-gray-400 text-sm">Contactez-nous pour en savoir plus sur la démarche NIRD.</p>
-                    <a href="{{ route('contact') }}" class="inline-block mt-4 bg-violet-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-violet-700 transition-colors">
+                    <p class="text-gray-400 text-sm mb-4">Contactez-nous pour en savoir plus sur la démarche NIRD.</p>
+                    <a href="{{ route('contact') }}" class="inline-block bg-nird-green text-white px-4 py-2 rounded-lg text-sm hover:bg-nird-green-dark transition-colors">
                         Nous contacter
                     </a>
                 </div>
